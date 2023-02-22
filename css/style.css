@@ -1,11 +1,25 @@
 body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: #fcfcfc; }
+  
+  background-color: var(--background-color); }
 
 p {
   color: #b3b3b3;
-  font-weight: 300; }
-
+  font-weight: 500; }
+:root{
+  --text-color : #000;
+  --background-color : #fcfcfc;
+  --navbar-color : #fff; 
+  --card-color : #fff;
+  --title-color : #2F58CD;
+}
+.dark-theme{
+  --text-color : #fcfcfc;
+--background-color : #23232E;
+--navbar-color :#000;
+--card-color : #000;
+--title-color : #85CDFD;
+}
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
@@ -57,7 +71,7 @@ aside {
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
-  background-color: #fff;
+  background-color: var(--navbar-color);
   -webkit-transition: 1s -webkit-transform cubic-bezier(0.23, 1, 0.32, 1);
   transition: 1s -webkit-transform cubic-bezier(0.23, 1, 0.32, 1);
   -o-transition: 1s transform cubic-bezier(0.23, 1, 0.32, 1);
@@ -110,7 +124,7 @@ aside {
       text-transform: uppercase;
       letter-spacing: .2rem;
       font-weight: 700;
-      color: #000;
+      color: var(--text-color);
       margin-bottom: 30px;
       margin-left: 40px; }
     aside .side-inner .featured-users ul, aside .side-inner .featured-users ul li {
@@ -127,7 +141,7 @@ aside {
         width: 45px;
         border-radius: 50%; }
       aside .side-inner .featured-users ul .person .d-flex .user-name {
-        color: #000;
+        color: var(--text-color);
         font-size: 14px; }
     aside .side-inner .nav-menu {
       margin-bottom: 50px; }
@@ -173,7 +187,7 @@ aside {
             opacity: 1;
             visibility: visible; }
       aside .side-inner .nav-menu ul li.active a {
-        color: #000; }
+        color: var(--text-color); }
         aside .side-inner .nav-menu ul li.active a:before {
           opacity: 1;
           visibility: visible;
@@ -210,6 +224,7 @@ main {
   cursor: pointer;
   position: relative;
   z-index: 99;
+  color: #2F58CD;
   float: right; }
 
 .burger:before, .burger span, .burger:after {
@@ -272,7 +287,7 @@ main {
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
-    background: #eee !important;
+    background: var(--background-color) ;
 }
 
 .btn-primary:hover,
@@ -295,14 +310,15 @@ section {
 
 section .section-title {
     text-align: center;
-    color: #000;
+    color: var(--title-color);
+    font-weight: 800;
     margin-bottom: 50px;
     text-transform: uppercase;
 }
 
 #team .card {
     border: none;
-    background: #ffffff;
+    background: var(--card-color);
 }
 
 .image-flip:hover .backside,
@@ -343,7 +359,9 @@ section .section-title {
     z-index: 2;
     margin-bottom: 30px;
 }
-
+.card-body img {
+  margin-top: 50px;
+}
 .backside {
     position: absolute;
     top: 0;
@@ -384,12 +402,16 @@ section .section-title {
 
 .backside .card a {
     font-size: 18px;
-    color: #6096B4 !important;
+    color: var(--title-color) !important;
 }
 
 .frontside .card .card-title,
 .backside .card .card-title {
-    color: #6096B4 !important;
+  font-weight: 600;
+    color: var(--title-color)!important;
+}
+.card-text {
+  color: var(--text-color);
 }
 
 .frontside .card .card-body img {
