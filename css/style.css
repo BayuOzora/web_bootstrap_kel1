@@ -351,7 +351,9 @@ section .section-title {
     transform-style: preserve-3d;
     position: relative;
 }
-
+#background {
+  background-color: var(--background-color);
+}
 .frontside {
     position: relative;
     -webkit-transform: rotateY(0deg);
@@ -362,6 +364,13 @@ section .section-title {
 .card-body img {
   margin-top: 50px;
 }
+.card-body  {
+  background-color: var(--card-color);
+}
+ #text-author{
+  color: var(--text-color);
+ }
+
 .backside {
     position: absolute;
     top: 0;
